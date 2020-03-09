@@ -1,21 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { HashRouter, Switch, Route } from 'react-router-dom'
 import './index.css';
-// import App from './App';
+import Home from './components/Home'
 import * as serviceWorker from './serviceWorker';
 
-const App = () => {
+const App = () => (
 
-  return <div>
-    
-<div>
-  hello worldy!
-</div>
+  <HashRouter>
+    <Switch>
+      <Route exact path="/" component={Home} />
 
+    </Switch>
+  </HashRouter>
 
-  </div>
-  
-}
+)
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
