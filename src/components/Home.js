@@ -3,11 +3,11 @@ import React, { useState } from 'react';
 
 const Home = () => {
 
-  return <div>
+  return <div className="homepage-container">
+    
+  hellllooo wwoorrllddyyyy!!!!
+    </div>
 
-    helllloooo world!
-  </div>
-
-}
-
+    }
+    
 export default Home
