@@ -7,16 +7,6 @@ const Navbar = () => {
 
   const [searches, setSearches] = useState([])
 
-//   const handleSearch = (e) => {
-//     e.preventDefault()
-//     // e.target.value !== '' ?
-//       axios.get(`https://api.teleport.org/api/cities/?search=${e.target.value}`)
-//         .then(res => setSearches(res.data))
-//         .catch(err => console.log(err))
-//         // : setSearches ('')
-// console.log(searches._embedded[citySearch][0])
-//   }
-
 const handleSearch = useCallback((e) => {
 
   axios.get(`https://api.teleport.org/api/cities/?search=${e.target.value}`)
@@ -41,7 +31,7 @@ const handleSearch = useCallback((e) => {
     </div>
     <div>
     {searches.map((search, i) => {
-                return <div key={i}>{search.matching_full_name}</div>
+                return <div key={i}>{search[0].matching_full_name}</div>
               })}
     </div>
   </div>
