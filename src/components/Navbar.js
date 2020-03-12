@@ -8,15 +8,14 @@ const Navbar = () => {
   const [searches, setSearches] = useState([])
 
 const handleSearch = useCallback((e) => {
-
+  e.target.value !== '' ?
   axios.get(`https://api.teleport.org/api/cities/?search=${e.target.value}`)
-  
   .then(res => {
     const suggest = res.data._embedded[citySearch]
     setSearches(suggest)
-
   })
   .catch(err => console.log(err))
+  : setSearches([''])
   console.log(searches)
 }, [searches])
 
