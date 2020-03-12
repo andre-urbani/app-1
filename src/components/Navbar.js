@@ -12,7 +12,7 @@ const handleSearch = useCallback((e) => {
   axios.get(`https://api.teleport.org/api/cities/?search=${e.target.value}`)
   
   .then(res => {
-    const suggest = res.data._embedded[citySearch][0]
+    const suggest = res.data._embedded[citySearch]
     setSearches(suggest)
 
   })
@@ -31,9 +31,10 @@ const handleSearch = useCallback((e) => {
     </div>
     <div>
     {searches.map((search, i) => {
-                return <div key={i}>{search[0].matching_full_name}</div>
+                return <div key={i}>{search.matching_full_name}</div>
               })}
     </div>
+    {/* <div>{searches.matching_full_name}</div> */}
   </div>
 
 
