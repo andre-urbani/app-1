@@ -7,17 +7,17 @@ const Navbar = () => {
 
   const [searches, setSearches] = useState([])
 
-const handleSearch = useCallback((e) => {
-  e.target.value !== '' ?
-  axios.get(`https://api.teleport.org/api/cities/?search=${e.target.value}`)
-  .then(res => {
-    const suggest = res.data._embedded[citySearch]
-    setSearches(suggest)
-  })
-  .catch(err => console.log(err))
-  : setSearches([''])
-  console.log(searches)
-}, [searches])
+  const handleSearch = useCallback((e) => {
+    e.target.value !== '' ?
+      axios.get(`https://api.teleport.org/api/cities/?search=${e.target.value}`)
+        .then(res => {
+          const suggest = res.data._embedded[citySearch]
+          setSearches(suggest)
+        })
+        .catch(err => console.log(err))
+      : setSearches([''])
+    console.log(searches)
+  }, [searches])
 
   return <div className="navbar-container">
     <div>Home</div>
@@ -26,14 +26,13 @@ const handleSearch = useCallback((e) => {
     <div>Cities</div>
     <div>Urban Area Scores</div>
     <div className="search-bar">
-      <input type="text" placeholder="Search for a city..." onChange={handleSearch}></input>
+      <input type="text" placeholder="Search for a city..." onChange={handleSearch} list="cities" name="city" />
+      <datalist id="cities">
+        {searches.map((search, i) => {
+          return <option key={i} value={search.matching_full_name} />
+        })}
+      </datalist>
     </div>
-    <div>
-    {searches.map((search, i) => {
-                return <div key={i}>{search.matching_full_name}</div>
-              })}
-    </div>
-    {/* <div>{searches.matching_full_name}</div> */}
   </div>
 
 
