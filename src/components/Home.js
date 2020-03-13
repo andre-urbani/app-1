@@ -5,7 +5,6 @@ const Home = () => {
 
   return <div className="homepage-container">
     
-  hellllooo wwoorrllddyyyy!!!!
     </div>
 
     }
