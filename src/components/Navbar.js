@@ -11,7 +11,7 @@ const Navbar = () => {
     e.target.value !== '' ?
       axios.get(`https://api.teleport.org/api/cities/?search=${e.target.value}`)
         .then(res => {
-          const suggest = res.data._embedded[citySearch]
+          const suggest = res.data._embedded[citySearch].slice(0, 9)
           setSearches(suggest)
         })
         .catch(err => console.log(err))
