@@ -4,7 +4,18 @@ import React, { useState } from 'react';
 const Home = () => {
 
   return <div className="homepage-container">
-    
+    <div>
+Continents
+    </div>
+    <div>
+      Countries
+    </div>
+    <div>
+      Cities
+    </div>
+    <div>
+      Urban Areas
+    </div>
     </div>
 
     }
