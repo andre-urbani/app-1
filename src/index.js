@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter, Switch, Route } from 'react-router-dom'
 import './index.css';
-import '/Users/andreurbani/development/app-1/src/style.scss'
+import './style.scss';
 
 import Home from './components/Home'
 import Navbar from './components/Navbar'
