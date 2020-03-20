@@ -20,7 +20,8 @@ const Continents = () => {
 
     <div>
       {continents.map((continent, i) => {
-        return <div key={i}>{continent.name}</div>
+        return <div key={i}>{continent.name}<div>List of countries</div>
+        <div>list of urban areas</div></div>
       })}
     </div>
 
