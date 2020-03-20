@@ -5,6 +5,8 @@ const Continents = () => {
 
   const conts = 'continent:items'
 
+  const [countryList, setCountryList] = useState(null)
+
   const [continents, setContinents] = useState([])
 
   useEffect(() => {
@@ -15,12 +17,18 @@ const Continents = () => {
       })
   }, [])
 
+function handleClick() {
+ setCountryList('helloworld')
+}
+
   return <div className="continents-container">
     {console.log(continents)}
 
     <div>
       {continents.map((continent, i) => {
-        return <div key={i}>{continent.name}<div>List of countries</div>
+        return <div key={i}>{continent.name}
+        <div onClick={handleClick}>List of countries</div>
+      <div>{countryList}</div>
         <div>list of urban areas</div></div>
       })}
     </div>

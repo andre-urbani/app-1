@@ -31,9 +31,6 @@ const Home = () => {
     <div>
       Countries
     </div>
-    {/* <div>
-      Cities
-    </div> */}
     <div>
       Urban Areas
     </div>
