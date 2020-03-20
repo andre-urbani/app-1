@@ -6,6 +6,13 @@ import './style.scss';
 
 import Home from './components/Home'
 import Navbar from './components/Navbar'
+import Continents from './components/Continents'
+import Continent from './components/Continent'
+import Countries from './components/Countries'
+import Country from './components/Country'
+import UrbanAreas from './components/UrbanAreas'
+import UrbanArea from './components/UrbanArea'
+import City from './components/City'
 
 import * as serviceWorker from './serviceWorker';
 
@@ -16,13 +23,13 @@ const App = () => (
     <Switch>
 
       <Route exact path="/" component={Home} />
-      <Route exact path="/continents" component={Home} />
-      <Route exact path="/continent" component={Home} />
-      <Route exact path="/countries" component={Home} />
-      <Route exact path="/country" component={Home} />
-      <Route exact path="/urbanareas" component={Home} />
-      <Route exact path="/urbanarea" component={Home} />
-      <Route exact path="/city" component={Home} />
+      <Route exact path="/continents" component={Continents} />
+      <Route exact path="/continent" component={Continent} />
+      <Route exact path="/countries" component={Countries} />
+      <Route exact path="/country" component={Country} />
+      <Route exact path="/urbanareas" component={UrbanAreas} />
+      <Route exact path="/urbanarea" component={UrbanArea} />
+      <Route exact path="/city" component={City} />
 
     </Switch>
   </HashRouter>
