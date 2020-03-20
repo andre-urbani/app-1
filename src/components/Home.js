@@ -5,6 +5,9 @@ const Home = () => {
 
   return <div className="homepage-container">
     <div>
+About
+    </div>
+    <div>
 Continents
     </div>
     <div>
