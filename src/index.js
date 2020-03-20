@@ -16,6 +16,13 @@ const App = () => (
     <Switch>
 
       <Route exact path="/" component={Home} />
+      <Route exact path="/continents" component={Home} />
+      <Route exact path="/continent" component={Home} />
+      <Route exact path="/countries" component={Home} />
+      <Route exact path="/country" component={Home} />
+      <Route exact path="/urbanareas" component={Home} />
+      <Route exact path="/urbanarea" component={Home} />
+      <Route exact path="/city" component={Home} />
 
     </Switch>
   </HashRouter>
