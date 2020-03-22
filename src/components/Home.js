@@ -1,5 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import axios from 'axios'
+
+import { Link } from 'react-router-dom'
 // import { HashLink as Link } from 'react-router-hash-link'
 
 const Home = () => {
@@ -26,13 +28,13 @@ const Home = () => {
       About
     </div>
     <div>
-      Continents
+    <Link to="/continents">Continents</Link>
     </div>
     <div>
-      Countries
+    <Link to="/countries">Countries</Link>
     </div>
     <div>
-      Urban Areas
+    <Link to="/urbanareas">Urban Areas</Link>
     </div>
     <div className="search-bar">
       <input type="text" placeholder="Search for a city..." onChange={handleSearch} list="cities" name="city" />
