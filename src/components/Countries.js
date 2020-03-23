@@ -7,6 +7,8 @@ const Countries = () => {
 
   const [countries, setCountries] = useState([])
 
+  const [selectedCountry, setSelectedCountry] = useState([])
+
   useEffect(() => {
     axios.get('https://api.teleport.org/api/countries/')
       .then(res => {
@@ -15,12 +17,19 @@ const Countries = () => {
       })
   }, [])
 
-  return <div className="continents-container">
-    {console.log(countries)}
+  function handleClick(e) {
+    const target = e.target.getAttribute('id')
+    e.preventDefault()
+    setSelectedCountry({
+      link: {target}
+    })
+    console.log(target)
+  }
 
+  return <div className="continents-container">
     <div>
       {countries.map((country, i) => {
-        return <div key={i}>{country.name}
+        return <div key={i} onClick={handleClick} id={country.href}>{country.name}
         {/* <div onClick={handleClick}>List of countries</div>
       <div>{countryList}</div> */}
         {/* <div>list of urban areas</div> */}
