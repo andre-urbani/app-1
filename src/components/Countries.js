@@ -1,7 +1,8 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
-const Countries = () => {
+const Countries = (props) => {
 
   const counts = 'country:items'
 
@@ -17,22 +18,28 @@ const Countries = () => {
       })
   }, [])
 
-  function handleClick(e) {
-    const target = e.target.getAttribute('id')
-    e.preventDefault()
-    setSelectedCountry({
-      link: {target}
-    })
-    console.log(target)
-  }
+  // function handleClick(e) {
+  //   const target = e.target.getAttribute('id')
+  //   e.preventDefault()
+  //   // setSelectedCountry({
+  //   //   link: {target}
+  //   // })
+  //   props.history.push('/country', 
+  //   link: {target})
+  //   console.log(target)
+  // }
 
   return <div className="continents-container">
     <div>
       {countries.map((country, i) => {
-        return <div key={i} onClick={handleClick} id={country.href}>{country.name}
-        {/* <div onClick={handleClick}>List of countries</div>
-      <div>{countryList}</div> */}
-        {/* <div>list of urban areas</div> */}
+        const target = country.href
+        return <div key={i} >
+        <p><Link
+              to={{
+                pathname: '/country',
+                target
+              }}>{country.name}</Link></p>
+              {console.log(target)}
         </div>
       })}
     </div>
