@@ -18,17 +18,6 @@ const Countries = (props) => {
       })
   }, [])
 
-  // function handleClick(e) {
-  //   const target = e.target.getAttribute('id')
-  //   e.preventDefault()
-  //   // setSelectedCountry({
-  //   //   link: {target}
-  //   // })
-  //   props.history.push('/country', 
-  //   link: {target})
-  //   console.log(target)
-  // }
-
   return <div className="continents-container">
     <div>
       {countries.map((country, i) => {

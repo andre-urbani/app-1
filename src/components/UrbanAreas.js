@@ -21,9 +21,6 @@ const UrbanAreas = () => {
     <div>
       {urbanAreas.map((urbanArea, i) => {
         return <div key={i}>{urbanArea.name}
-        {/* <div onClick={handleClick}>List of countries</div>
-      <div>{countryList}</div> */}
-        {/* <div>list of urban areas</div> */}
         </div>
       })}
     </div>
