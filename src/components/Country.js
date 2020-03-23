@@ -3,8 +3,6 @@ import axios from 'axios'
 
 const Country = (props) => {
 
-  console.log(props.location.state)
-
   const [country, setCountry] = useState([])
 
   useEffect(() => {

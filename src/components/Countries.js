@@ -28,7 +28,6 @@ const Countries = (props) => {
                 pathname: '/country',
                 target
               }}>{country.name}</Link></p>
-              {console.log(target)}
         </div>
       })}
     </div>
