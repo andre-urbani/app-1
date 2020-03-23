@@ -20,7 +20,7 @@ const Country = (props) => {
   }, [])
 
   return <div className="continents-container">
-    {console.log(salaries[0])}
+    {console.log(country.iso_alpha2)}
     <div>
      {country.name}
     </div>
@@ -36,6 +36,9 @@ const Country = (props) => {
         })}
     
     </div>
+    {country.iso_alpha2 ?
+    <img src={`https://www.countryflags.io/${country.iso_alpha2}/shiny/64.png`}/>
+    : null}
   </div>
 
 
