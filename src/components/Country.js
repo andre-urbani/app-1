@@ -22,16 +22,8 @@ const Country = (props) => {
      Population: {country.population}
     </div>
     <div>
-     {country.currency_code}
+     Currency: {country.currency_code}
     </div>
-    <div>
-     {country.currency_code}
-    </div>
-    <div>
-     {country.currency_code}
-    </div>
-
-
   </div>
 
 
