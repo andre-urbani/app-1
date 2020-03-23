@@ -5,7 +5,7 @@ const Country = (props) => {
 
   const [country, setCountry] = useState([])
 
-  const [salaries, setSalaries] = useState({})
+  const [salaries, setSalaries] = useState([])
 
   useEffect(() => {
     axios.get(props.location.target)
@@ -13,13 +13,14 @@ const Country = (props) => {
         setCountry(res.data)
         axios.get(`${props.location.target}salaries`)
         .then(res => {
-          setSalaries(res.data)
+          const salaryList = res.data.salaries
+          setSalaries(salaryList)
       })
       })
   }, [])
 
   return <div className="continents-container">
-    {console.log(salaries.salaries)}
+    {console.log(salaries[0])}
     <div>
      {country.name}
     </div>
@@ -29,9 +30,12 @@ const Country = (props) => {
     <div>
      Currency: {country.currency_code}
     </div>
-    {/* <div>
-     Job 1: {salaries.salaries[0].job.title}
-    </div> */}
+    <div>
+    {salaries.map((salary, i) => {
+          return <div key={i}>{salary.job.title} </div>
+        })}
+    
+    </div>
   </div>
 
 
