@@ -14,17 +14,19 @@ const Country = (props) => {
       })
   }, [])
 
-  // function handleClick(e) {
-  //   const target = e.target.getAttribute('id')
-  //   e.preventDefault()
-  //   // setSelectedCountry({
-  //   //   link: {target}
-  //   // })
-  //   props.history.push('/country', target)
-  //   console.log(target)
-  // }
-
   return <div className="continents-container">
+    <div>
+     {country.name}
+    </div>
+    <div>
+     Population: {country.population}
+    </div>
+    <div>
+     {country.currency_code}
+    </div>
+    <div>
+     {country.currency_code}
+    </div>
     <div>
      {country.currency_code}
     </div>
