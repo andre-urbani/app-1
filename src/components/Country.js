@@ -27,9 +27,15 @@ const Country = (props) => {
       })
   }, [])
 
-  function handleClick(e) {
-    // setSelectedJob(e.target.value.percentile_25)
-    console.log(e.target.selectedIndex)
+  function handleClick(e, index) {
+    e.preventDefault()
+    setPercentiles({
+      twentyFifth: salaries[index].salary_percentiles.percentile_25,
+      fiftieth: salaries[index].salary_percentiles.percentile_50,
+      seventyFifth: salaries[index].salary_percentiles.percentile_75
+
+    })
+    console.log(index)
   }
 
   return <div className="continents-container">
@@ -57,10 +63,19 @@ const Country = (props) => {
       <button class="dropbtn">Dropdown</button>
       <div class="dropdown-content">
       {salaries.map((salary, i) => {
-        return <a key={i} onClick={handleClick} id={salary.salary_percentiles}>{salary.job.title}</a>
+        return <a key={i} onClick={(e)=>handleClick(e,i)} id={salary.salary_percentiles}>{salary.job.title}</a>
         
       })}
       </div>
+    </div>
+    <div>
+      ${percentiles.twentyFifth}
+      </div>
+      <div>
+      ${percentiles.fiftieth}
+      </div>
+      <div>
+      ${percentiles.seventyFifth}
     </div>
   </div>
 
