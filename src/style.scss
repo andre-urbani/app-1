@@ -1,5 +1,5 @@
 body {
-  font-size: 20px;
+  font-size: 10px;
 }
 
 /* Dropdown Button */
@@ -7,7 +7,7 @@ body {
   background-color: #4CAF50;
   color: white;
   padding: 16px;
-  font-size: 16px;
+  font-size: 10px;
   border: none;
 }
 
@@ -25,10 +25,12 @@ body {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  width: 2000px
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
+  display: inline;
   color: black;
   padding: 12px 16px;
   text-decoration: none;

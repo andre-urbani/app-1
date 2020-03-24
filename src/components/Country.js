@@ -30,12 +30,12 @@ const Country = (props) => {
     <div>
       Currency: {country.currency_code}
     </div>
-    <div>
+    {/* <div>
       {salaries.map((salary, i) => {
         return <div key={i}>{salary.job.title} </div>
       })}
 
-    </div>
+    </div> */}
     {country.iso_alpha2 ?
       <img src={`https://www.countryflags.io/${country.iso_alpha2}/shiny/64.png`} />
       : null}
