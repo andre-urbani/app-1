@@ -7,6 +7,14 @@ const Country = (props) => {
 
   const [salaries, setSalaries] = useState([])
 
+  // const [selectedJob, setSelectedJob] = useState(null)
+
+  const [percentiles, setPercentiles] = useState({
+    twentyFifth: '',
+    fiftieth: '',
+    seventyFifth: ''
+  })
+
   useEffect(() => {
     axios.get(props.location.target)
       .then(res => {
@@ -18,6 +26,11 @@ const Country = (props) => {
           })
       })
   }, [])
+
+  function handleClick(e) {
+    // setSelectedJob(e.target.value.percentile_25)
+    console.log(e.target.selectedIndex)
+  }
 
   return <div className="continents-container">
     {console.log(country.iso_alpha2)}
@@ -44,7 +57,8 @@ const Country = (props) => {
       <button class="dropbtn">Dropdown</button>
       <div class="dropdown-content">
       {salaries.map((salary, i) => {
-        return <a key={i}>{salary.job.title}</a>
+        return <a key={i} onClick={handleClick} id={salary.salary_percentiles}>{salary.job.title}</a>
+        
       })}
       </div>
     </div>
