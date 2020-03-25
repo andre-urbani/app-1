@@ -34,7 +34,7 @@ const UrbanArea = (props) => {
     {console.log(imageJson)}
     {imageJson ?
     
-     <div><img src={imageJson.web} /> 
+     <div><img src={imageJson.mobile} /> 
      </div> :
    null }
   </div>
