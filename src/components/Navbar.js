@@ -1,15 +1,25 @@
 import React, { useState, useCallback } from 'react';
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
 
   return <div className="navbar-container">
-    <div>Home</div>
-    <div>About</div>
-    <div>Continents</div>
-    <div>Countries</div>
-    <div>Cities</div>
-    <div>Urban Area Scores</div>
+    <div>
+    <Link to="/">Home</Link>
+    </div>
+    <div>
+    <Link to="/about">About</Link>
+    </div>
+    <div>
+    <Link to="/continents">Continents</Link>
+    </div>
+    <div>
+    <Link to="/countries">Countries</Link>
+    </div>
+    <div>
+    <Link to="/urbanareas">Urban Areas</Link>
+    </div>
   </div>
 
 
