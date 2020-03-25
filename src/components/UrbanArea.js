@@ -21,9 +21,9 @@ const UrbanArea = (props) => {
           .then(res => {
             const uaImage = res.data._links[image].href
             setUrbanAreaImage(uaImage)
-            axios.get(urbanAreaImage)
+            axios.get(res.data._links[image].href)
               .then(res => {
-                setImageJson(res.data)
+                setImageJson(res.data.photos[0].image)
               })
           })
       })
@@ -32,11 +32,11 @@ const UrbanArea = (props) => {
   return <div>
     {/* {console.log(urbanArea[image])} */}
     {console.log(imageJson)}
-    {/* {urbanArea ?
+    {imageJson ?
     
-     <div><img src={urbanAreaImage.photos[0].image.web} /> 
+     <div><img src={imageJson.web} /> 
      </div> :
-   null } */}
+   null }
   </div>
 
 
