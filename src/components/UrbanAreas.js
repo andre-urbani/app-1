@@ -1,6 +1,8 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import axios from 'axios'
 
+import { Link } from 'react-router-dom'
+
 const UrbanAreas = () => {
 
   const uAreas = 'ua:item'
@@ -16,11 +18,14 @@ const UrbanAreas = () => {
   }, [])
 
   return <div className="continents-container">
-    {console.log(urbanAreas)}
-
     <div>
       {urbanAreas.map((urbanArea, i) => {
-        return <div key={i}>{urbanArea.name}
+        const target = urbanArea.href
+        return <div key={i}><p><Link
+        to={{
+          pathname: '/urbanarea',
+          target
+        }}>{urbanArea.name}</Link></p>
         </div>
       })}
     </div>
