@@ -18,9 +18,11 @@ const UrbanArea = (props) => {
   }, [])
 
   return <div>
-
     {console.log(urbanArea[image])}
-    {/* <img src={urbanArea[image].href} /> */}
+   {urbanArea ?
+    
+     <div><img src={urbanArea[image].href} /> </div> :
+   null }
   </div>
 
   
