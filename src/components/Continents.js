@@ -1,5 +1,6 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 const Continents = () => {
 
@@ -29,7 +30,7 @@ function handleClick() {
         const target = continent.href
         return <div key={i}><Link
         to={{
-          pathname: '/country',
+          pathname: '/continent',
           target
         }}>{continent.name}</Link>
         <div onClick={handleClick}>List of countries</div>
