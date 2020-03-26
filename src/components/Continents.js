@@ -26,7 +26,12 @@ function handleClick() {
 
     <div>
       {continents.map((continent, i) => {
-        return <div key={i}>{continent.name}
+        const target = continent.href
+        return <div key={i}><Link
+        to={{
+          pathname: '/country',
+          target
+        }}>{continent.name}</Link>
         <div onClick={handleClick}>List of countries</div>
       <div>{countryList}</div>
         <div>list of urban areas</div></div>
