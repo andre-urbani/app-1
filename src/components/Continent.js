@@ -9,12 +9,13 @@ const Continent = (props) => {
   useEffect(() => {
     axios.get(props.location.target)
       .then(res => {
-        const uaList = res.data._links
-        setUrbanArea(uaList)
+        const selected = res.data._links
+        setContinent(selected)
           })
   }, [])
 
   return <div>
+    {console.log(continent)}
   </div>
 
 
