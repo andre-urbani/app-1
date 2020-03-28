@@ -15,7 +15,6 @@ const Continent = (props) => {
   }, [])
 
   return <div>
-    {console.log(continent)}
   </div>
 
 
