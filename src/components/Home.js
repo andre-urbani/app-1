@@ -27,6 +27,9 @@ const Home = () => {
       About
     </div>
     <div>
+    <Link to="/graph">TEST</Link>
+    </div>
+    <div>
     <Link to="/continents">Continents</Link>
     </div>
     <div>
