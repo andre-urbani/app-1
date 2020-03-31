@@ -3,7 +3,7 @@ import { XYPlot, VerticalGridLines, HorizontalGridLines, XAxis, YAxis, LabelSeri
 import '/Users/andreurbani/development/app-1/node_modules/react-vis/dist/style.css'
 
 
-const greenData = [{ x: 'Internet', y: 5 }, { x: 'Lifestyle', y: 5 }, { x: 'Cost of Living', y: 15 }];
+
 // const blueData = [{x: 'A', y: 12}, {x: 'B', y: 2}, {x: 'C', y: 11}];
 
 // const labelData = greenData.map((d, idx) => ({
@@ -14,6 +14,8 @@ const greenData = [{ x: 'Internet', y: 5 }, { x: 'Lifestyle', y: 5 }, { x: 'Cost
 const GraphTest = (props) => {
 
   const [useCanvas, setUseCanvas] = useState(false)
+
+  const greenData = [{ x: 'Internet', y: props.test.internet }, { x: 'Lifestyle', y: 5 }, { x: 'Cost of Living', y: 15 }];
 
  
   // const content = useCanvas ? 'TOGGLE TO SVG' : 'TOGGLE TO CANVAS';

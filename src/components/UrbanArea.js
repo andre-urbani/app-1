@@ -11,6 +11,10 @@ const UrbanArea = (props) => {
 
   const [imageJson, setImageJson] = useState([])
 
+  const [test, setTest] = useState({
+    internet: 5
+  })
+
   useEffect(() => {
     axios.get(props.location.target)
       .then(res => {
@@ -32,7 +36,7 @@ const UrbanArea = (props) => {
      <div><img src={imageJson.mobile} /> 
      </div> :
    null }
-   <GraphTest/>
+   <GraphTest test={test}/>
   </div>
 
 
