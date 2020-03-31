@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { XYPlot, VerticalGridLines, HorizontalGridLines, XAxis, YAxis, LabelSeries, VerticalBarSeriesCanvas, VerticalBarSeries  } from 'react-vis';
-import '/Users/andreurbani/development/app-1/src/style.css'
+import '../style.css'
 
 
 
