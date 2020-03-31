@@ -1,13 +1,16 @@
 import React from 'react';
 
-import {
-  XYPlot,
-  XAxis,
-  YAxis,
-  VerticalGridLines,
-  HorizontalGridLines,
-  LineMarkSeries
-} from 'index';
+// import {
+//   XYPlot,
+//   XAxis,
+//   YAxis,
+//   VerticalGridLines,
+//   HorizontalGridLines,
+//   LineMarkSeries
+// } from 'index';
+
+import '/Users/andreurbani/development/app-1/node_modules/react-vis/dist/style.css';
+import {XYPlot, VerticalGridLines, HorizontalGridLines, XAxis, YAxis, LineMarkSeries } from 'react-vis';
 
 const GraphTest = () => {
   return (
@@ -23,12 +26,12 @@ const GraphTest = () => {
         }}
         lineStyle={{stroke: 'red'}}
         markStyle={{stroke: 'blue'}}
-        data={[{x: 1, y: 10}, {x: 2, y: 5}, {x: 3, y: 15}]}
+        data={[{x: 'hello', y: 10}, {x: 'hi', y: 5}, {x: 'hey', y: 15}]}
       />
       <LineMarkSeries
         className="linemark-series-example-2"
         curve={'curveMonotoneX'}
-        data={[{x: 1, y: 11}, {x: 1.5, y: 29}, {x: 3, y: 7}]}
+        data={[{x: 'hello', y: 11}, {x: 'hi', y: 29}, {x: 'hello', y: 7}]}
       />
     </XYPlot>
   );
