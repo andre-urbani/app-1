@@ -1,40 +1,28 @@
 import React from 'react';
+import {XYPlot, VerticalGridLines, HorizontalGridLines, XAxis, YAxis, LabelSeries} from 'react-vis';
+import '/Users/andreurbani/development/app-1/node_modules/react-vis/dist/style.css'
 
-// import {
-//   XYPlot,
-//   XAxis,
-//   YAxis,
-//   VerticalGridLines,
-//   HorizontalGridLines,
-//   LineMarkSeries
-// } from 'index';
 
-import '/Users/andreurbani/development/app-1/node_modules/react-vis/dist/style.css';
-import {XYPlot, VerticalGridLines, HorizontalGridLines, XAxis, YAxis, LineMarkSeries } from 'react-vis';
+const greenData = [{ x: 'A', y: 10 }, { x: 'B', y: 5 }, { x: 'C', y: 15 }];
 
-const GraphTest = () => {
-  return (
-    <XYPlot width={300} height={300}>
+const labelData = greenData.map((d, idx) => ({
+  x: d.x,
+  y: Math.max(greenData[idx].y)
+}));
+
+const GraphTest= (props) => {
+
+  return<div>
+    <XYPlot xType="ordinal" width={300} height={300} xDistance={100}>
       <VerticalGridLines />
       <HorizontalGridLines />
       <XAxis />
       <YAxis />
-      <LineMarkSeries
-        className="linemark-series-example"
-        style={{
-          strokeWidth: '3px'
-        }}
-        lineStyle={{stroke: 'red'}}
-        markStyle={{stroke: 'blue'}}
-        data={[{x: 'hello', y: 10}, {x: 'hi', y: 5}, {x: 'hey', y: 15}]}
-      />
-      <LineMarkSeries
-        className="linemark-series-example-2"
-        curve={'curveMonotoneX'}
-        data={[{x: 'hello', y: 11}, {x: 'hi', y: 29}, {x: 'hello', y: 7}]}
-      />
+      <LabelSeries data={labelData} getLabel={d => d.x} />
     </XYPlot>
-  );
+  </div>
+
+
 }
 
 export default GraphTest
