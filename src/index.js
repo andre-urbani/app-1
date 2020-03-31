@@ -13,10 +13,9 @@ import Country from './components/Country'
 import UrbanAreas from './components/UrbanAreas'
 import UrbanArea from './components/UrbanArea'
 import City from './components/City'
-import GraphTest from './components/GraphTest';
+import GraphTest from './components/GraphTest'
 
 import * as serviceWorker from './serviceWorker';
-
 
 const App = () => (
 
