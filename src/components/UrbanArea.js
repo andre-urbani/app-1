@@ -1,5 +1,6 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import axios from 'axios'
+import GraphTest from './GraphTest';
 
 
 const UrbanArea = (props) => {
@@ -31,6 +32,7 @@ const UrbanArea = (props) => {
      <div><img src={imageJson.mobile} /> 
      </div> :
    null }
+   <GraphTest/>
   </div>
 
 

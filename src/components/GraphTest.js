@@ -16,7 +16,7 @@ const GraphTest = (props) => {
   const [useCanvas, setUseCanvas] = useState(false)
 
  
-  const content = useCanvas ? 'TOGGLE TO SVG' : 'TOGGLE TO CANVAS';
+  // const content = useCanvas ? 'TOGGLE TO SVG' : 'TOGGLE TO CANVAS';
   const BarSeries = useCanvas ? VerticalBarSeriesCanvas : VerticalBarSeries;
   return (
     <div>
