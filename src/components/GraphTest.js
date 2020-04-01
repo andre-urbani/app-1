@@ -15,14 +15,14 @@ const GraphTest = (props) => {
 
   const [useCanvas, setUseCanvas] = useState(false)
 
-  const greenData = [{ x: 'Housing', y: props.test.internet }, { x: 'Cost of Living', y: 5 }, { x: 'Commute', y: 3 }, { x: 'Safety', y: 3 }, { x: 'Healthcare', y: 3 }, { x: 'Education', y: 3 }, { x: 'Environmental Quality', y: 3 }, { x: 'Economy', y: 3 }, { x: 'Internet Access', y: 3 }, { x: 'Leisure & Culture', y: 3 }, { x: 'Tolerance', y: 3 }, { x: 'Outdoors', y: 3 }];
+  const greenData = [{ x: 'Housing', y: props.test.internet }, { x: 'Cost of Living', y: 5 }, { x: 'Commute', y: 3 }, { x: 'Safety', y: 3 }, { x: 'Education', y: 3 }, { x: 'Economy', y: 3 }, { x: 'Leisure & Culture', y: 3 }, { x: 'Tolerance', y: 3 }, { x: 'Outdoors', y: 3 }];
 
  
   // const content = useCanvas ? 'TOGGLE TO SVG' : 'TOGGLE TO CANVAS';
   const BarSeries = useCanvas ? VerticalBarSeriesCanvas : VerticalBarSeries;
   return (
     <div>
-      <XYPlot xType="ordinal" width={1100} height={500} xDistance={100}>
+      <XYPlot xType="ordinal" width={750} height={500} xDistance={100}>
         <VerticalGridLines />
         <HorizontalGridLines />
         <XAxis />
