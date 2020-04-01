@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import axios from 'axios'
-import GraphTest from './GraphTest';
+import GraphTestTwo from './GraphTestTwo';
 
 
 const UrbanArea = (props) => {
@@ -12,7 +12,7 @@ const UrbanArea = (props) => {
   const [imageJson, setImageJson] = useState([])
 
   const [test, setTest] = useState({
-    internet: 8
+    internet: 3213
   })
 
   useEffect(() => {
@@ -36,7 +36,7 @@ const UrbanArea = (props) => {
      <div><img src={imageJson.mobile} /> 
      </div> :
    null }
-   <GraphTest test={test}/>
+   <GraphTestTwo test={test}/>
   </div>
 
 
