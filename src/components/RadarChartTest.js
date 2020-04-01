@@ -5,23 +5,57 @@ import {
 
 const data = [
   {
-    subject: 'Math', A: 120, B: 110, fullMark: 150,
+    subject: 'Housing', A: 10, fullMark: 10,
   },
   {
-    subject: 'Chinese', A: 98, B: 130, fullMark: 150,
+    subject: 'Cost of Living', A: 8.2, fullMark: 10,
   },
   {
-    subject: 'English', A: 86, B: 130, fullMark: 150,
+    subject: 'Startups', A: 4.6, fullMark: 10,
   },
   {
-    subject: 'Geography', A: 99, B: 100, fullMark: 150,
+    subject: 'Venture Capital', A: 7, fullMark: 10,
   },
   {
-    subject: 'Physics', A: 85, B: 90, fullMark: 150,
+    subject: 'Travel Connectivity', A: 6.8, fullMark: 10,
   },
   {
-    subject: 'History', A: 65, B: 85, fullMark: 150,
+    subject: 'Commute', A: 6, fullMark: 10,
   },
+  {
+    subject: 'Business Freedom', A: 3, fullMark: 10,
+  },
+  {
+    subject: 'Safety', A: 8, fullMark: 10,
+  },
+  {
+    subject: 'Healthcare', A: 4, fullMark: 10,
+  },
+  {
+    subject: 'Education', A: 7.3, fullMark: 10,
+  },
+  {
+    subject: 'Environmental Quality', A: 6.8, fullMark: 10,
+  },
+  {
+    subject: 'Internet Access', A: 5.55, fullMark: 10,
+  },
+  {
+    subject: 'Taxation', A: 9.2, fullMark: 10,
+  },
+  {
+    subject: 'Economy', A: 8.3, fullMark: 10,
+  },
+  {
+    subject: 'Leisure & Culture', A: 5.4, fullMark: 10,
+  },
+  {
+    subject: 'Tolerance', A: 4, fullMark: 10,
+  },
+  {
+    subject: 'Outdoor', A: 7, fullMark: 10,
+  },
+  
 ];
 
 export default class Example extends PureComponent {
@@ -29,7 +63,7 @@ export default class Example extends PureComponent {
 
   render() {
     return (
-      <RadarChart cx={300} cy={250} outerRadius={150} width={500} height={500} data={data}>
+      <RadarChart cx={300} cy={250} outerRadius={150} width={800} height={800} data={data}>
         <PolarGrid />
         <PolarAngleAxis dataKey="subject" />
         <PolarRadiusAxis />
