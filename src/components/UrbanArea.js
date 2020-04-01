@@ -12,7 +12,7 @@ const UrbanArea = (props) => {
   const [imageJson, setImageJson] = useState([])
 
   const [test, setTest] = useState({
-    internet: 3213
+    internet: 9.432
   })
 
   useEffect(() => {
