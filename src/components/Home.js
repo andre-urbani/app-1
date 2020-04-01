@@ -33,6 +33,9 @@ const Home = () => {
     <Link to="/graph2">TEST2</Link>
     </div>
     <div>
+    <Link to="/radar">TEST3</Link>
+    </div>
+    <div>
     <Link to="/continents">Continents</Link>
     </div>
     <div>
