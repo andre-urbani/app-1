@@ -27,7 +27,10 @@ const Home = () => {
       About
     </div>
     <div>
-    <Link to="/graph">TEST</Link>
+    <Link to="/graph">TEST1</Link>
+    </div>
+    <div>
+    <Link to="/graph2">TEST2</Link>
     </div>
     <div>
     <Link to="/continents">Continents</Link>

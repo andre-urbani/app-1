@@ -14,6 +14,7 @@ import UrbanAreas from './components/UrbanAreas'
 import UrbanArea from './components/UrbanArea'
 import City from './components/City'
 import GraphTest from './components/GraphTest'
+import GraphTestTwo from './components/GraphTestTwo'
 
 import * as serviceWorker from './serviceWorker';
 
@@ -32,6 +33,7 @@ const App = () => (
       <Route exact path="/urbanarea" component={UrbanArea} />
       <Route exact path="/city" component={City} />
       <Route exact path="/graph" component={GraphTest} />
+      <Route exact path="/graph2" component={GraphTestTwo} />
 
     </Switch>
   </HashRouter>
