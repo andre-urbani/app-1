@@ -37,8 +37,8 @@ const UrbanArea = (props) => {
       <div><img src={imageJson.mobile} />
       </div> :
       null} */}
-    {/* <RadarChartTest urbanArea={urbanArea} /> */}
-    <SvgChartTest urbanArea={urbanArea}/>
+    <RadarChartTest urbanArea={urbanArea} />
+    {/* <SvgChartTest urbanArea={urbanArea}/> */}
  
     {/* {test ?
 

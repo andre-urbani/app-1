@@ -46,34 +46,34 @@ const RadaChartTest = (props) => {
 
   const data = [
     {
-      subject: housing.name, A: housing.score_out_of_10, fullMark: 15,
+      subject: housing.name, A: housing.score_out_of_10, fullMark: 10,
     },
     {
-      subject: costOfLiving.name, A: costOfLiving.score_out_of_10, fullMark: 15,
+      subject: costOfLiving.name, A: costOfLiving.score_out_of_10, fullMark: 10,
     },
     {
-      subject: commute.name, A: commute.score_out_of_10, fullMark: 15,
+      subject: commute.name, A: commute.score_out_of_10, fullMark: 10,
     },
     {
-      subject: safety.name, A: safety.score_out_of_10, fullMark: 15,
+      subject: safety.name, A: safety.score_out_of_10, fullMark: 10,
     },
     {
-      subject: education.name, A: education.score_out_of_10, fullMark: 15,
+      subject: education.name, A: education.score_out_of_10, fullMark: 10,
     },
     {
-      subject: environment.name, A: environment.score_out_of_10, fullMark: 15,
+      subject: environment.name, A: environment.score_out_of_10, fullMark: 10,
     },
     {
-      subject: economy.name, A: economy.score_out_of_10, fullMark: 15,
+      subject: economy.name, A: economy.score_out_of_10, fullMark: 10,
     },
     {
-      subject: leisure.name, A: leisure.score_out_of_10, fullMark: 15,
+      subject: leisure.name, A: leisure.score_out_of_10, fullMark: 10,
     },
     {
-      subject: tolerance.name, A: tolerance.score_out_of_10, fullMark: 15,
+      subject: tolerance.name, A: tolerance.score_out_of_10, fullMark: 10,
     },
     {
-      subject: outdoor.name, A: outdoor.score_out_of_10, fullMark: 15,
+      subject: outdoor.name, A: outdoor.score_out_of_10, fullMark: 10,
     },
 
   ];
@@ -105,7 +105,7 @@ const RadaChartTest = (props) => {
     <RadarChart cx={300} cy={250} outerRadius={150} width={800} height={800} data={data} >
       <PolarGrid />
       <PolarAngleAxis dataKey="subject" />
-      <PolarRadiusAxis />
+      <PolarRadiusAxis type="number" domain={[0, 10]}/>
       <Radar dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
     </RadarChart>
   </div>

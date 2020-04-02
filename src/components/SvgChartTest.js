@@ -1,5 +1,5 @@
 
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import RadarChart from 'react-svg-radar-chart';
 import 'react-svg-radar-chart/build/css/index.css'
 import axios from 'axios'
@@ -8,9 +8,6 @@ const RadaChartTest = (props) => {
 
 
   const score = 'ua:scores'
-
-  const [test, setTest] = useState([])
-
 
   useEffect(() => {
     if (props.urbanArea[score] !== undefined) {
@@ -30,9 +27,9 @@ const RadaChartTest = (props) => {
     }
   }, [props.urbanArea[score]])
 
-  
 
-  const [housing, setHousing] = useState([]) 
+
+  const [housing, setHousing] = useState([])
   const [costOfLiving, setCostOfLiving] = useState([])
   const [commute, setCommute] = useState([])
   const [safety, setSafety] = useState([])
@@ -79,12 +76,22 @@ const RadaChartTest = (props) => {
   // ];
 
 
+  const data = [
+    {
+      data: {
+        housing: 0.64,
+        costOfLiving: 0.3,
+        internet: 0.2,
+        commute: 0.5,
+        stuff: 0.9,
+        things: 0.5,
 
-  // if (props.urbanArea[score] === undefined) {
-  //   return <div className="loading-container">Loading...</div>
-  // }
-
-  
+      },
+      meta: {
+        color: "#edc951"
+      }
+    }
+  ]
 
   const captions = {
     // columns
@@ -94,37 +101,27 @@ const RadaChartTest = (props) => {
     commute: 'commute',
     stuff: 'stuff',
     things: 'things'
-    
+
   };
 
-  const housingScore = housing.score_out_of_10
 
-  const data =  [
-    {
-     "data": {
-      housing: housing.score_out_of_10,
-      costOfLiving: 0.3,
-      internet: 0.2,
-      commute: 0.5,
-      stuff: 0.7,
-      things: 0.9,
-      
-     },
-     "meta": {
-      "color": "#edc951"
-     }
-    }
-   ]
-
-  return <div>
-   {console.log(housing.score_out_of_10)}
-   <RadarChart
-    captions={captions}
-    data={data}
-    size={450}
-  />
-  </div>
+  if (props.urbanArea[score] === undefined) {
+    return <div className="loading-container">Loading...</div>
+  } else
+    return <div>
+      {console.log(housing.name)}
+      <RadarChart
+        captions={captions}
+        data={data}
+        size={450}
+      />
+    </div>
 }
 
 
 export default RadaChartTest
+
+
+
+
+
