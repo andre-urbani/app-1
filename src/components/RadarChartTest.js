@@ -82,20 +82,6 @@ const RadaChartTest = (props) => {
   ];
 
 
-
-  
-    // useEffect(() => {
-
-    //   axios.get(props.urbanArea[score].href)
-    //     .then(res => {
-    //       setTest(res.data)
-    //     })
-
-    //   console.log(test)
-
-    // }, [])
-
-
   if (props.urbanArea[score] === undefined) {
     return <div className="loading-container">Loading...</div>
   }
