@@ -106,7 +106,7 @@ const RadaChartTest = (props) => {
     <td dangerouslySetInnerHTML={{__html: summary}} />
     {/* {console.log(props.urbanArea[score].href)} */}
     {console.log(summary)}
-    <RadarChart cx={300} cy={250} outerRadius={150} width={800} height={800} data={data} >
+    <RadarChart cx={300} cy={250} outerRadius={200} width={550} height={500} data={data} >
       <PolarGrid />
       <PolarAngleAxis dataKey="subject" />
       <PolarRadiusAxis type="number" domain={[0, 10]}/>
