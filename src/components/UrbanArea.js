@@ -32,11 +32,11 @@ const UrbanArea = (props) => {
   }, [])
 
   return <div>
-    {/* {imageJson ?
+    {imageJson ?
 
       <div><img src={imageJson.mobile} />
       </div> :
-      null} */}
+      null}
     <RadarChartTest urbanArea={urbanArea} />
     {/* <SvgChartTest urbanArea={urbanArea}/> */}
  

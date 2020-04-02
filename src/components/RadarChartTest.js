@@ -26,6 +26,7 @@ const RadaChartTest = (props) => {
           setLeisure(res.data.categories[14])
           setTolerance(res.data.categories[15])
           setOutdoor(res.data.categories[16])
+          setSummary(res.data.summary)
         })
     }
   }, [props.urbanArea[score]])
@@ -42,6 +43,8 @@ const RadaChartTest = (props) => {
   const [leisure, setLeisure] = useState([])
   const [tolerance, setTolerance] = useState([])
   const [outdoor, setOutdoor] = useState([])
+
+  const [summary, setSummary] = useState('')
 
 
   const data = [
@@ -100,14 +103,16 @@ const RadaChartTest = (props) => {
 
 
   return <div>
+    <td dangerouslySetInnerHTML={{__html: summary}} />
     {/* {console.log(props.urbanArea[score].href)} */}
-    {console.log(housing.name)}
+    {console.log(summary)}
     <RadarChart cx={300} cy={250} outerRadius={150} width={800} height={800} data={data} >
       <PolarGrid />
       <PolarAngleAxis dataKey="subject" />
       <PolarRadiusAxis type="number" domain={[0, 10]}/>
       <Radar dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
     </RadarChart>
+    
   </div>
 }
 
