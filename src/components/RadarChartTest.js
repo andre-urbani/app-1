@@ -6,9 +6,28 @@ import axios from 'axios'
 
 const RadaChartTest = (props) => {
 
+
+  const score = 'ua:scores'
+
+  const [test, setTest] = useState([])
+
+
+  useEffect(() => {
+    if (props.urbanArea[score] !== undefined) {
+      axios.get(props.urbanArea[score].href)
+        .then(res => {
+          setHousing(res.data.categories[0])
+        })
+    }
+  }, [props.urbanArea[score]])
+
+  
+
+  const [housing, setHousing] = useState([]) 
+
   const data = [
     {
-      subject: 'Housing', A: 2, fullMark: 15,
+      subject: housing.name, A: housing.score_out_of_10, fullMark: 15,
     },
     {
       subject: 'Cost of Living', A: 8.2, fullMark: 15,
@@ -40,23 +59,6 @@ const RadaChartTest = (props) => {
 
   ];
 
-  // const href = 'href'
-  const score = 'ua:scores'
-
-  const [test, setTest] = useState([])
-
-
-
-
-  useEffect(() => {
-    if (props.urbanArea[score] !== undefined) {
-      axios.get(props.urbanArea[score].href)
-        .then(res => {
-          setTest(res.data)
-        })
-    }
-  }, [props.urbanArea[score]])
-
 
 
   
@@ -80,7 +82,7 @@ const RadaChartTest = (props) => {
 
   return <div>
     {/* {console.log(props.urbanArea[score].href)} */}
-    {console.log(test)}
+    {console.log(housing.name)}
     <RadarChart cx={300} cy={250} outerRadius={150} width={800} height={800} data={data} >
       <PolarGrid />
       <PolarAngleAxis dataKey="subject" />
