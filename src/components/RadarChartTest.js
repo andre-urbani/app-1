@@ -1,4 +1,4 @@
-import React, { PureComponent, useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis,
 } from 'recharts';
@@ -8,12 +8,11 @@ const RadaChartTest = (props) => {
 
 
   const score = 'ua:scores'
-
-  const [test, setTest] = useState([])
-
+  const scores = props.urbanArea[score]
 
   useEffect(() => {
-    if (props.urbanArea[score] !== undefined) {
+    
+    if (scores !== undefined) {
       axios.get(props.urbanArea[score].href)
         .then(res => {
           setHousing(res.data.categories[0])
@@ -29,7 +28,7 @@ const RadaChartTest = (props) => {
           setSummary(res.data.summary)
         })
     }
-  }, [props.urbanArea[score]])
+  }, [ scores ])
 
   
 
