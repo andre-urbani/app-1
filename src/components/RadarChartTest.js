@@ -1,7 +1,8 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent, useEffect, useState, useCallback } from 'react';
 import {
   Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis,
 } from 'recharts';
+import axios from 'axios'
 
 const RadaChartTest = (props) => {
 
@@ -39,15 +40,56 @@ const RadaChartTest = (props) => {
 
   ];
 
-  return (
+  // const href = 'href'
+  const score = 'ua:scores'
+
+  const [test, setTest] = useState([])
+
+
+
+
+  useEffect(() => {
+    if (props.urbanArea[score] !== undefined) {
+      axios.get(props.urbanArea[score].href)
+        .then(res => {
+          setTest(res.data)
+        })
+    }
+  }, [props.urbanArea[score]])
+
+
+
+  
+    // useEffect(() => {
+
+    //   axios.get(props.urbanArea[score].href)
+    //     .then(res => {
+    //       setTest(res.data)
+    //     })
+
+    //   console.log(test)
+
+    // }, [])
+
+
+  if (props.urbanArea[score] === undefined) {
+    return <div className="loading-container">Loading...</div>
+  }
+
+
+
+  return <div>
+    {/* {console.log(props.urbanArea[score].href)} */}
+    {console.log(test)}
     <RadarChart cx={300} cy={250} outerRadius={150} width={800} height={800} data={data} >
       <PolarGrid />
       <PolarAngleAxis dataKey="subject" />
       <PolarRadiusAxis />
       <Radar dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
     </RadarChart>
-  );
+  </div>
 }
+
 
 export default RadaChartTest
 

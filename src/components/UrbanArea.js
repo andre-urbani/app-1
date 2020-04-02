@@ -13,7 +13,7 @@ const UrbanArea = (props) => {
 
   const [imageJson, setImageJson] = useState([])
 
-  const [test, setTest] = useState([])
+  // const [test, setTest] = useState([])
 
 
 
@@ -25,29 +25,22 @@ const UrbanArea = (props) => {
         axios.get(res.data._links[image].href)
           .then(res => {
             setImageJson(res.data.photos[0].image)
-            const scoreUrl = urbanArea[score].href
-            axios.get(scoreUrl)
-              .then(res => {
-                setTest(res.data)
-              })
           })
       })
   }, [])
 
   return <div>
-    {/* {console.log(urbanArea[image])} */}
-    {console.log(urbanArea[score])}
     {imageJson ?
 
       <div><img src={imageJson.mobile} />
       </div> :
       null}
-    <RadarChartTest test={test} />
-    {test ?
+    <RadarChartTest urbanArea={urbanArea} />
+    {/* {test ?
 
       <div>hello
       </div> :
-      null}
+      null} */}
   </div>
 
 
