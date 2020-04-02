@@ -84,11 +84,30 @@ const RadaChartTest = (props) => {
   //   return <div className="loading-container">Loading...</div>
   // }
 
+  
+
+  const captions = {
+    // columns
+    housing: housing.name,
+    costOfLiving: costOfLiving.name,
+    internet: 'internet',
+    commute: 'commute',
+    stuff: 'stuff',
+    things: 'things'
+    
+  };
+
+  const housingScore = housing.score_out_of_10
+
   const data =  [
     {
      "data": {
-      "housing": housing.score_out_of_10,
-      "cost of living": costOfLiving.score_out_of_10,
+      housing: housing.score_out_of_10,
+      costOfLiving: 0.3,
+      internet: 0.2,
+      commute: 0.5,
+      stuff: 0.7,
+      things: 0.9,
       
      },
      "meta": {
@@ -97,17 +116,8 @@ const RadaChartTest = (props) => {
     }
    ]
 
-  const captions = {
-    // columns
-    housing: housing.name,
-    design: 'Design',
-    useful: 'Usefulness',
-    speed: 'Speed',
-    weight: 'Weight'
-  };
-
   return <div>
-   
+   {console.log(housing.score_out_of_10)}
    <RadarChart
     captions={captions}
     data={data}
