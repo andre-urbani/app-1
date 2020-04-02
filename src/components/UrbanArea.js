@@ -1,6 +1,7 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import axios from 'axios'
 import RadarChartTest from './RadarChartTest';
+import GraphTestTwo from './GraphTestTwo';
 
 
 const UrbanArea = (props) => {
@@ -30,12 +31,13 @@ const UrbanArea = (props) => {
   }, [])
 
   return <div>
-    {imageJson ?
+    {/* {imageJson ?
 
       <div><img src={imageJson.mobile} />
       </div> :
-      null}
+      null} */}
     <RadarChartTest urbanArea={urbanArea} />
+ 
     {/* {test ?
 
       <div>hello
