@@ -7,8 +7,6 @@ const Country = (props) => {
 
   const [salaries, setSalaries] = useState([])
 
-  // const [selectedJob, setSelectedJob] = useState(null)
-
   const [percentiles, setPercentiles] = useState({
     twentyFifth: '',
     fiftieth: '',

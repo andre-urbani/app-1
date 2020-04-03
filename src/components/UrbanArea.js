@@ -1,15 +1,10 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios'
 import RadarChartTest from './RadarChartTest';
-import GraphTestTwo from './GraphTestTwo';
-import SvgChartTest from './SvgChartTest'
-
 
 const UrbanArea = (props) => {
 
   const image = 'ua:images'
-
-  const score = 'ua:scores'
 
   const [urbanArea, setUrbanArea] = useState([])
 

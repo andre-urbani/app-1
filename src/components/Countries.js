@@ -8,8 +8,6 @@ const Countries = (props) => {
 
   const [countries, setCountries] = useState([])
 
-  const [selectedCountry, setSelectedCountry] = useState([])
-
   useEffect(() => {
     axios.get('https://api.teleport.org/api/countries/')
       .then(res => {
