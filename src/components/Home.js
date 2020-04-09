@@ -19,12 +19,12 @@ const Home = () => {
         })
         .catch(err => console.log(err))
       : setSearches([''])
-    console.log(searches)
+   
   }, [searches])
 
-  function handleClick(e) {
-
-    console.log(e.target.value)
+  function handleClick(e, index) {
+    e.preventDefault()
+    console.log(index)
   }
 
   return <div className="homepage-container">
@@ -32,25 +32,25 @@ const Home = () => {
       About
     </div>
     <div>
-    <Link to="/graph">TEST1</Link>
+      <Link to="/graph">TEST1</Link>
     </div>
     <div>
-    <Link to="/graph2">TEST2</Link>
+      <Link to="/graph2">TEST2</Link>
     </div>
     <div>
-    <Link to="/radar">TEST3</Link>
+      <Link to="/radar">TEST3</Link>
     </div>
     <div>
-    <Link to="/radartest">TEST4</Link>
+      <Link to="/radartest">TEST4</Link>
     </div>
     <div>
-    <Link to="/continents">Continents</Link>
+      <Link to="/continents">Continents</Link>
     </div>
     <div>
-    <Link to="/countries">Countries</Link>
+      <Link to="/countries">Countries</Link>
     </div>
     <div>
-    <Link to="/urbanareas">Urban Areas</Link>
+      <Link to="/urbanareas">Urban Areas</Link>
     </div>
     <div className="search-bar">
       <input type="text" placeholder="Search for a city..." onChange={handleSearch} list="cities" name="city" />
