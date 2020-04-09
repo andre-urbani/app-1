@@ -22,6 +22,11 @@ const Home = () => {
     console.log(searches)
   }, [searches])
 
+  function handleClick() {
+
+    
+  }
+
   return <div className="homepage-container">
     <div>
       About
@@ -51,7 +56,7 @@ const Home = () => {
       <input type="text" placeholder="Search for a city..." onChange={handleSearch} list="cities" name="city" />
       <datalist id="cities">
         {searches.map((search, i) => {
-          return <option key={i} value={search.matching_full_name} />
+          return <option key={i} value={search.matching_full_name} onClick={handleClick}/>
         })}
       </datalist>
     </div>
