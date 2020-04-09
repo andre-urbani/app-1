@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
-import RadarChartTest from './RadarChartTest';
 
-const UrbanArea = (props) => {
+const City = (props) => {
 
   const image = 'ua:images'
 
@@ -46,4 +45,4 @@ const UrbanArea = (props) => {
 
 }
 
-export default UrbanArea
+export default City
