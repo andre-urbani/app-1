@@ -16,7 +16,6 @@ import City from './components/City'
 import GraphTest from './components/GraphTest'
 import GraphTestTwo from './components/GraphTestTwo'
 import RadarChartTest from './components/RadarChartTest'
-import SvgChartTest from './components/SvgChartTest'
 
 import * as serviceWorker from './serviceWorker';
 
@@ -37,7 +36,6 @@ const App = () => (
       <Route exact path="/graph" component={GraphTest} />
       <Route exact path="/graph2" component={GraphTestTwo} />
       <Route exact path="/radar" component={RadarChartTest} />
-      <Route exact path="/radartest" component={SvgChartTest} />
 
     </Switch>
   </HashRouter>
