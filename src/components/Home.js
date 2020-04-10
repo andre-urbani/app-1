@@ -24,7 +24,7 @@ const Home = () => {
 
   function handleClick(e, index) {
     e.preventDefault()
-    console.log(index)
+    console.log(e.target[index])
   }
 
   return <div className="homepage-container">
