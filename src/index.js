@@ -14,7 +14,6 @@ import UrbanAreas from './components/UrbanAreas'
 import UrbanArea from './components/UrbanArea'
 import City from './components/City'
 import GraphTest from './components/GraphTest'
-import GraphTestTwo from './components/GraphTestTwo'
 import RadarChartTest from './components/RadarChartTest'
 
 import * as serviceWorker from './serviceWorker';
