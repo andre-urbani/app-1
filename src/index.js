@@ -34,7 +34,6 @@ const App = () => (
       <Route exact path="/urbanarea" component={UrbanArea} />
       <Route exact path="/city" component={City} />
       <Route exact path="/graph" component={GraphTest} />
-      <Route exact path="/graph2" component={GraphTestTwo} />
       <Route exact path="/radar" component={RadarChartTest} />
 
     </Switch>
