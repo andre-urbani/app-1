@@ -10,10 +10,6 @@ const UrbanArea = (props) => {
 
   const [imageJson, setImageJson] = useState([])
 
-  // const [test, setTest] = useState([])
-
-
-
   useEffect(() => {
     axios.get(props.location.target)
       .then(res => {
