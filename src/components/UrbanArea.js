@@ -29,7 +29,6 @@ const UrbanArea = (props) => {
       </div> :
       null}
     <RadarChartTest urbanArea={urbanArea} />
-    {/* <SvgChartTest urbanArea={urbanArea}/> */}
  
     {/* {test ?
 
