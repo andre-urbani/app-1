@@ -30,11 +30,6 @@ const UrbanArea = (props) => {
       null}
     <RadarChartTest urbanArea={urbanArea} />
  
-    {/* {test ?
-
-      <div>hello
-      </div> :
-      null} */}
   </div>
 
 
