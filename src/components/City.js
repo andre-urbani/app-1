@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-const City = (props) => {
+const City = () => {
 
-  const [city, setCity] = useState([])
+
 
   
 
