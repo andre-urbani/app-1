@@ -24,7 +24,7 @@ const Home = () => {
 
   function handleClick(e, index) {
     e.preventDefault()
-    console.log(e.target[index])
+    console.log('hello')
   }
 
   return <div className="homepage-container">
@@ -60,6 +60,8 @@ const Home = () => {
         })}
       </datalist>
     </div>
+
+    <button onClick={(e) => handleClick(e)}></button>
 
   </div>
 
