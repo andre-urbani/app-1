@@ -57,7 +57,7 @@ const Home = () => {
       {/* <datalist id="cities">
       <select onChange={handleClick}>  */}
         {searches.map((search, i) => {
-          return <div key={i} value={search.matching_full_name} onClick={handleClick}>{search.matching_full_name}</div>
+          return <div key={i} value={search.matching_full_name} onClick={handleClick}><Link to="/cities">{search.matching_full_name}</Link></div>
             
         })}
         {/* </select>
