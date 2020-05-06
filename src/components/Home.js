@@ -3,7 +3,7 @@ import axios from 'axios'
 
 import { Link } from 'react-router-dom'
 
-const Home = () => {
+const Home = (props) => {
 
 
   const citySearch = "city:search-results"
@@ -22,10 +22,11 @@ const Home = () => {
    
   }, [searches])
 
-  function handleClick(e) {
-    e.preventDefault(e)
-    console.log('hello')
-  }
+  // function handleClick(e) {
+  //   e.preventDefault(e)
+  //   const test = e.target.value
+  //   props.history.push('/city', test)
+  // }
 
   return <div className="homepage-container">
     <div>
@@ -45,7 +46,13 @@ const Home = () => {
       {/* <datalist id="cities">
       <select onChange={handleClick}>  */}
         {searches.map((search, i) => {
-          return <div key={i} value={search.matching_full_name} onClick={handleClick}><Link to="/cities">{search.matching_full_name}</Link></div>
+          console.log(search._links)
+          const target = search.matching_full_name
+          return <div key={i} value={search.matching_full_name}><Link
+          to={{
+            pathname: '/city',
+            target
+          }}>{search.matching_full_name}</Link></div>
             
         })}
         {/* </select>

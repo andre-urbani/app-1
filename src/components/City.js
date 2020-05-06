@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 
-const City = () => {
+const City = (props) => {
 
 
 
   
 
   return <div>
-    
+    hello
+    {console.log(props.location.target)}
   </div>
 
 
