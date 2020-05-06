@@ -32,18 +32,6 @@ const Home = () => {
       About
     </div>
     <div>
-      <Link to="/graph">TEST1</Link>
-    </div>
-    <div>
-      <Link to="/graph2">TEST2</Link>
-    </div>
-    <div>
-      <Link to="/radar">TEST3</Link>
-    </div>
-    <div>
-      <Link to="/radartest">TEST4</Link>
-    </div>
-    <div>
       <Link to="/continents">Continents</Link>
     </div>
     <div>
