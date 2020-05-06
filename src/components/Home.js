@@ -56,12 +56,14 @@ const Home = () => {
       <input type="text" placeholder="Search for a city..." onChange={handleSearch} list="cities" name="city" />
       <datalist id="cities">
         {searches.map((search, i) => {
-          return <option key={i} value={search.matching_full_name} onClick={(e) => handleClick(e, i)} />
+          return <select onChange={(e) => handleClick(e, i)}> 
+            <option key={i} value={search.matching_full_name}  />
+            </select>
         })}
       </datalist>
     </div>
 
-    <button onClick={(e) => handleClick(e)}></button>
+    {/* <button onClick={(e) => handleClick(e)}></button> */}
 
   </div>
 
