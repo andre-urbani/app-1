@@ -64,10 +64,6 @@ const Home = () => {
       </datalist> */}
     </div>
 
-    
-
-    {/* <button onClick={(e) => handleClick(e)}></button> */}
-
   </div>
 
 }
