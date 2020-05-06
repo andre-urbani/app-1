@@ -22,8 +22,8 @@ const Home = () => {
    
   }, [searches])
 
-  function handleClick(e, index) {
-    e.preventDefault()
+  function handleClick(e) {
+    e.preventDefault(e)
     console.log('hello')
   }
 
@@ -54,14 +54,17 @@ const Home = () => {
     </div>
     <div className="search-bar">
       <input type="text" placeholder="Search for a city..." onChange={handleSearch} list="cities" name="city" />
-      <datalist id="cities">
+      {/* <datalist id="cities">
+      <select onChange={handleClick}>  */}
         {searches.map((search, i) => {
-          return <select onChange={(e) => handleClick(e, i)}> 
-            <option key={i} value={search.matching_full_name}  />
-            </select>
+          return <div key={i} value={search.matching_full_name} onClick={handleClick}>{search.matching_full_name}</div>
+            
         })}
-      </datalist>
+        {/* </select>
+      </datalist> */}
     </div>
+
+    
 
     {/* <button onClick={(e) => handleClick(e)}></button> */}
 
