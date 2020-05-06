@@ -9,6 +9,7 @@ const City = (props) => {
   return <div>
     hello
     {console.log(props.location.target)}
+    {props.location.target}
   </div>
 
 
