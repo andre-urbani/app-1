@@ -26,20 +26,16 @@ const UrbanArea = (props) => {
       })
   }, [])
 
-  // const handleClick = useCallback((e) => {
-  //   e.preventDefault()
+  const handleClick = useCallback((e) => {
+    e.preventDefault()
 
-  //   axios.get('https://api.teleport.org/api/urban_areas/')
-  //     .then(res => {
-  //       const urbanAreaList = res.data._links[uAreas]
-  //       setUrbanAreas(urbanAreaList)
-  //     })
-  //     console.log('hello')
-  // }, [])
-
-  function handleClick() {
-    console.log('hello')
-  }
+    axios.get('https://api.teleport.org/api/urban_areas/')
+      .then(res => {
+        const urbanAreaList = res.data._links[uAreas]
+        setUrbanAreas(urbanAreaList)
+      })
+      console.log('hello')
+  }, [])
 
   return <div>
     {imageJson ?
@@ -51,6 +47,8 @@ const UrbanArea = (props) => {
  
     <button onClick={handleClick}>compare</button>
     {console.log(urbanAreas)}
+
+    {/* make a ternary operator which checks if there is anything in urbanAreas. if true then map them to separate divs, if not then null */}
   </div>
 
   
