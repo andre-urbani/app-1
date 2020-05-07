@@ -7,17 +7,15 @@ const City = (props) => {
   
   const uArea = 'city:urban_area'
 
-  const [urbanArea, setUrbanArea] = useState()
+  const [urbanArea, setUrbanArea] = useState([])
 
   useEffect(() => {
     axios.get(props.location.target)
       .then(res => {
         const cityList = res.data._links
         setCity(cityList)
-        // axios.get(props.location.target._links[uArea])
-        //   .then(res => {
-        //     setUrbanArea(res.data.href)
-        // })
+        setUrbanArea(cityList[uArea])
+        
       })
   }, [])
   
@@ -25,7 +23,7 @@ const City = (props) => {
   return <div>
     hello
     {/* {city} */}
-    {console.log(city[uArea])}
+    {console.log(urbanArea.href)}
   </div>
 
 
