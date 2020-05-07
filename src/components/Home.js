@@ -47,7 +47,6 @@ const selectedCity = "city:item"
       {/* <datalist id="cities">
       <select onChange={handleClick}>  */}
         {searches.map((search, i) => {
-          console.log(search._links)
           const target = search._links[selectedCity].href
           return <div key={i} value={search.matching_full_name}><Link
           to={{

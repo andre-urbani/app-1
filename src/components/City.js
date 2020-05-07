@@ -1,15 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios'
 
 const City = (props) => {
 
+  const [city, setCity] = useState([])
 
 
+  useEffect(() => {
+    axios.get(props.location.target)
+      .then(res => {
+        const cityList = res.data._links
+        setCity(cityList)
+      })
+  }, [])
   
 
   return <div>
     hello
-    {console.log(props.location.target)}
-    {props.location.target}
+    {/* {city} */}
+    {console.log(city)}
   </div>
 
 
