@@ -49,7 +49,7 @@ const UrbanArea = (props) => {
       null}
     <RadarChartTest urbanArea={urbanArea} />
  
-    <button onCLick={() => handleClick }>compare</button>
+    <button onClick={handleClick}>compare</button>
     {console.log(urbanAreas)}
   </div>
 
