@@ -34,7 +34,6 @@ const UrbanArea = (props) => {
         const urbanAreaList = res.data._links[uAreas]
         setUrbanAreas(urbanAreaList)
       })
-      console.log('hello')
   }, [])
 
   return <div>
@@ -46,7 +45,7 @@ const UrbanArea = (props) => {
     <RadarChartTest urbanArea={urbanArea} />
  
     <button onClick={handleClick}>compare</button>
-    {console.log(urbanAreas)}
+   
 
     {/* make a ternary operator which checks if there is anything in urbanAreas. if true then map them to separate divs, if not then null */}
   </div>
