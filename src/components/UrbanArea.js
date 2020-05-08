@@ -47,13 +47,17 @@ const UrbanArea = (props) => {
     <button onClick={handleClick}>compare</button>
     {console.log(urbanAreas)}
 
+    {urbanAreas ? (
+
     <div>
-      {urbanAreas.map((urbanArea, i) => {
+      {urbanAreas.map((urbArea, i) => {
         
-        return <div key={i}><p>>{urbanArea.name}</p>
+        return <div key={i}><p>{urbArea.name}</p>
         </div>
       })}
     </div>
+    ) : null}
+
 
     {/* make a ternary operator which checks if there is anything in urbanAreas. if true then map them to separate divs, if not then null */}
   </div>
