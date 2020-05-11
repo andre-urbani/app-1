@@ -35,6 +35,21 @@ const UrbanArea = (props) => {
       })
   }, [])
 
+  // const handleUAreaClick = useCallback(() => {
+
+  //   axios.get('https://api.teleport.org/api/urban_areas/')
+  //     .then(res => {
+  //       const urbanAreaList = res.data._links[uAreas]
+  //       setUrbanAreas(urbanAreaList)
+  //     })
+
+  //   console.log('hello')
+  // }, [])
+
+  function handleUAreaClick() {
+    console.log('hello')
+  }
+
   return <div>
     {imageJson ?
 
@@ -48,7 +63,7 @@ const UrbanArea = (props) => {
     {urbanAreas ? (
     <div>
       {urbanAreas.map((urbArea, i) => {
-        return <div key={i}><p>{urbArea.name}</p>
+        return <div key={i}><p onClick={handleUAreaClick}>{urbArea.name}</p>
         </div>
       })}
     </div>
