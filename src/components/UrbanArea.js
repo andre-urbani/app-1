@@ -35,20 +35,17 @@ const UrbanArea = (props) => {
       })
   }, [])
 
-  // const handleUAreaClick = useCallback(() => {
+  const handleUAreaClick = useCallback(() => {
 
-  //   axios.get('https://api.teleport.org/api/urban_areas/')
-  //     .then(res => {
-  //       const urbanAreaList = res.data._links[uAreas]
-  //       setUrbanAreas(urbanAreaList)
-  //     })
+    // axios.get('https://api.teleport.org/api/urban_areas/')
+    //   .then(res => {
+    //     const urbanAreaList = res.data._links[uAreas]
+    //     setUrbanAreas(urbanAreaList)
+    //   })
 
-  //   console.log('hello')
-  // }, [])
-
-  function handleUAreaClick() {
     console.log('hello')
-  }
+  }, [])
+
 
   return <div>
     {imageJson ?
