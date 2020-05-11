@@ -46,10 +46,8 @@ const UrbanArea = (props) => {
     <button onClick={handleClick}>compare</button>
 
     {urbanAreas ? (
-
     <div>
       {urbanAreas.map((urbArea, i) => {
-        
         return <div key={i}><p>{urbArea.name}</p>
         </div>
       })}
