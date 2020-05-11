@@ -26,8 +26,7 @@ const UrbanArea = (props) => {
       })
   }, [])
 
-  const handleClick = useCallback((e) => {
-    e.preventDefault()
+  const handleClick = useCallback(() => {
 
     axios.get('https://api.teleport.org/api/urban_areas/')
       .then(res => {
