@@ -4,6 +4,8 @@ import RadarChartTest from './RadarChartTest';
 
 const UrbanArea = (props) => {
 
+  const score = 'ua:scores'
+
   const image = 'ua:images'
 
   const uAreas = 'ua:item'
@@ -37,11 +39,22 @@ const UrbanArea = (props) => {
 
   const handleUAreaClick = useCallback(() => {
 
-    // axios.get('https://api.teleport.org/api/urban_areas/')
-    //   .then(res => {
-    //     const urbanAreaList = res.data._links[uAreas]
-    //     setUrbanAreas(urbanAreaList)
-    //   })
+    if (scores !== undefined) {
+      axios.get(urbanAreas[score].href)
+        .then(res => {
+          setHousing(res.data.categories[0])
+          setCostOfLiving(res.data.categories[1])
+          setCommute(res.data.categories[5])
+          setSafety(res.data.categories[7])
+          setEducation(res.data.categories[9])
+          setEnvironment(res.data.categories[10])
+          setEconomy(res.data.categories[11])
+          setLeisure(res.data.categories[14])
+          setTolerance(res.data.categories[15])
+          setOutdoor(res.data.categories[16])
+          setSummary(res.data.summary)
+        })
+    }
 
     console.log('hello')
   }, [])
