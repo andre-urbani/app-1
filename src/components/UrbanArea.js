@@ -39,28 +39,28 @@ const UrbanArea = (props) => {
 
   const handleUAreaClick = useCallback(() => {
 
-    if (scores !== undefined) {
-      axios.get(urbanAreas[score].href)
-        .then(res => {
-          setHousing(res.data.categories[0])
-          setCostOfLiving(res.data.categories[1])
-          setCommute(res.data.categories[5])
-          setSafety(res.data.categories[7])
-          setEducation(res.data.categories[9])
-          setEnvironment(res.data.categories[10])
-          setEconomy(res.data.categories[11])
-          setLeisure(res.data.categories[14])
-          setTolerance(res.data.categories[15])
-          setOutdoor(res.data.categories[16])
-          setSummary(res.data.summary)
-        })
-    }
-
-    console.log('hello')
+    // if (scores !== undefined) {
+    //   axios.get(urbanAreas[score].href)
+    //     .then(res => {
+    //       setHousing(res.data.categories[0])
+    //       setCostOfLiving(res.data.categories[1])
+    //       setCommute(res.data.categories[5])
+    //       setSafety(res.data.categories[7])
+    //       setEducation(res.data.categories[9])
+    //       setEnvironment(res.data.categories[10])
+    //       setEconomy(res.data.categories[11])
+    //       setLeisure(res.data.categories[14])
+    //       setTolerance(res.data.categories[15])
+    //       setOutdoor(res.data.categories[16])
+    //       setSummary(res.data.summary)
+    //     })
+    // }
   }, [])
 
 
   return <div>
+
+    {console.log(urbanAreas)}
     {imageJson ?
 
       <div><img src={imageJson.mobile} />
