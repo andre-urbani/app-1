@@ -23,8 +23,6 @@ function handleClick() {
 }
 
   return <div className="continents-container">
-    {console.log(continents)}
-
     <div>
       {continents.map((continent, i) => {
         const target = continent.href

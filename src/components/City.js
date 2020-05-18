@@ -21,8 +21,6 @@ const City = (props) => {
   
 
   return <div>
-    hello
-    {/* {city} */}
     {console.log(urbanArea.href)}
   </div>
 

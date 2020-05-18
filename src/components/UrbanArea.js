@@ -59,8 +59,6 @@ const UrbanArea = (props) => {
 
 
   return <div>
-
-    {console.log(urbanAreas)}
     {imageJson ?
 
       <div><img src={imageJson.mobile} />

@@ -37,7 +37,6 @@ const Country = (props) => {
   }
 
   return <div className="continents-container">
-    {console.log(country.iso_alpha2)}
     <div>
       {country.name}
     </div>
